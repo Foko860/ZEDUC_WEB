@@ -1,0 +1,392 @@
+/*Style css du header*/
+
+        /* Media Queries pour les petits écrans (tablette, mobile) */
+        @media screen and (max-width: 768px) {
+            header {
+                flex-direction: column; /* Disposition en colonne pour les petits écrans */
+                align-items: flex-start;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                margin: 10px 0 0 0;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            #cart {
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            /* Réduction de la taille de la police pour les petits écrans */
+            header .logo {
+                font-size: 20px;
+            }
+
+            nav ul li a {
+                font-size: 16px;
+            }
+
+            #cart a {
+                font-size: 20px;
+            }
+        }
+        header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Style du menu de navigation */
+        nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin-left: 40px;
+        
+        }
+
+        .Acceuil{
+            color: yellow;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        a :hover{
+            color:yellow;
+            background-color: #dc3545;
+            border-radius: 20px;
+            padding: 10px;
+            transition: 1S;
+        }
+       li:hover{
+        background-color: orange;
+        padding: 10px;
+        border-radius: 10px;
+        transition: 1s;
+       }
+section{
+    margin-bottom: 30px;
+}
+header{
+ width: 100%;
+display: flex;
+background-color: #3B2615;
+justify-content: space-between;
+align-items: center;
+padding: 10px 20px;
+margin: 0;
+} 
+
+
+/*Style css du header*/
+
+
+/*Style css du main*/
+
+.Section_photo{
+    background-image:url(Asset/Rectangle5.png);
+    height: auto;
+    height: 750px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom:60px;
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+    background-size: cover; /* Assure que l'image couvre tout l'arrière-plan */
+    background-position: center; /* Centre l'image dans l'élément */
+}
+.Section_photo p {
+text-align: center;
+font-family: "Timmana", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size:48px;
+
+}
+ 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif   ;
+    text-decoration: none; 
+}
+
+/*css des paragraphes*/
+.divertissement
+ {
+font-size: 32px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Timmana", sans-serif;
+margin-top: 77px;
+margin-bottom: 77px;
+}
+.Abonnement
+ {
+font-size: 32px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: "Timmana", sans-serif;
+margin-top: 77px;
+margin-bottom: 77px;
+}
+/*css des paragraphes*/
+
+
+/*Style css du main*/
+
+/*style css du footer*/
+footer{
+    background-color: #111;
+}
+.footerContainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: black;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #111;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 10px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 10px;
+    text-decoration: none;
+    font-size: 1em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: white;
+}
+.designer{
+    opacity: 0.7;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
+@media (max-width: 700px){
+    .footerNav ul{
+        flex-direction: column;
+    } 
+    .footerNav ul li{
+        width:100%;
+        text-align: center;
+        margin: 10px;
+    }
+    .socialIcons a{
+        padding: 8px;
+        margin: 4px;
+    }
+}
+/*style css du footer*/
+body{
+    background: linear-gradient(#88887e 27%, #EEEDDD 79%); 
+}
+/*Css du tableau des abonnements*/
+.sectionCentrer
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+margin-left: 30%;
+margin-right: 30%;
+}
+.table{
+    background: linear-gradient(#88887e 27%, #EEEDDD 79%);
+}
+.navdiv{
+    align-items: center;
+justify-content: space-between;
+}/*Css du tableau des abonnement*/
+
+.card-container .card{
+    background-color: #EEEDDD;
+    border-radius: 20px 20px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width:20% ;
+    height: 20%;
+}
+.card-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .card-content{
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 10px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+}
+.card p {
+    margin-top:10px ; 
+}
+
+.card .add-to-cart{
+    background-color: orange;
+    border-radius: 10px;
+    margin-top:10px ;
+    padding: 10px;
+    text-align: center;
+}
+/* Style pour le bouton du panier */
+#cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#cart a {
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+    position: relative;
+}
+
+#cart-count {
+    color: white;
+    background-color: red;
+    border-radius: 50%;
+    padding: 2px 6px;
+    position: absolute;
+    top: -10px;
+    right: -15px;
+    font-size: 12px;
+}
+
+/* Panneau du panier - caché par défaut (hors de l'écran à droite) */
+.cart-panel {
+    position: fixed;
+    right: -100%;
+    top: 0;
+    height: 100%;
+    width: 300px;
+    background-color: white;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.cart-panel.open {
+    right: 0; /* Fait apparaître le panneau du côté droit de l'écran */
+}
+
+/* Style pour le bouton fermer dans le panier */
+#close-cart {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+button.decrease, button.increase, button.remove {
+    background-color: #dc3545;
+    padding: 5px 10px;
+}
+
+button.decrease:hover, button.increase:hover, button.remove:hover {
+    background-color: #c82333;
+}
+
+.cart-panel h2{
+ font-family: "Londrina Sketch", sans-serif ;
+    font-weight: 400;
+  font-style: normal;
+}
