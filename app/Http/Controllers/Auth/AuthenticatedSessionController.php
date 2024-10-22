@@ -16,19 +16,34 @@ class AuthenticatedSessionController extends Controller
      */
     public function create(): View
     {
-        return view('auth.login');
+        return view('htmlprojetweb.connexion');
     }
 
     /**
      * Handle an incoming authentication request.
+     */ /**
+     * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(Request $request): RedirectResponse
     {
-        $request->authenticate();
+        // Valider les données du formulaire
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required',
+        ]);
 
-        $request->session()->regenerate();
+        // Authentifier l'utilisateur
+        if (Auth::attempt($request->only('email', 'password'))) {
+            // Regénérer la session
+            $request->session()->regenerate();
 
-        return redirect()->intended(route('dashboard', absolute: false));
+            return redirect()->intended('/dashboard'); // Redirigez vers le tableau de bord
+        }
+
+        // Si l'authentification échoue, retourner une erreur
+        return back()->withErrors([
+            'email' => 'Les identifiants fournis sont incorrects.',
+        ]);
     }
 
     /**

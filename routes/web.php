@@ -1,15 +1,32 @@
 <?php
 
+use App\Http\Controllers\ConnexionController;
 use App\Http\Controllers\ParrainageController;
+use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Routing\Controllers\Middleware;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view("htmlprojetweb.inscription");
 });
 
+// Route pour afficher le formulaire de connexion
+Route::get('/connexion', [ConnexionController::class, 'showLoginForm'])->name('login');
+
+
+
+// Route pour afficher le formulaire de connexion
+Route::get('/connexion', [AuthenticatedSessionController::class, 'create'])->name('login');
+
+// Route pour traiter la soumission du formulaire de connexion
+Route::post('/connexion', [AuthenticatedSessionController::class, 'store']);
+
+
+Route::post('/register', [RegisteredUserController::class, 'store']);
+ 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
