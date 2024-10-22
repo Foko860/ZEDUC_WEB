@@ -17,10 +17,15 @@ class User extends Authenticatable
      *
      * @var array<int, string>
      */
+    protected $primaryKey="id";
     protected $fillable = [
         'name',
         'email',
         'password',
+        'role',
+        'numero',
+        'status',
+        'points_de_fidelites',
     ];
 
     /**
@@ -42,7 +47,9 @@ class User extends Authenticatable
     {
         return [
             'email_verified_at' => 'datetime',
-            'password' => 'hashed',
+            'password',
+            'role'=> 'string',
+            'status'=> 'string',
         ];
     }
 }
