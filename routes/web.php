@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\ConnexionController;
+use App\Http\Controllers\Auth\ConnexionController;
 use App\Http\Controllers\ParrainageController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\ProfileController;
@@ -14,15 +14,19 @@ Route::get('/', function () {
 });
 
 // Route pour afficher le formulaire de connexion
-Route::get('/connexion', [ConnexionController::class, 'showLoginForm'])->name('login');
+//Route::get('/connexion', [ConnexionController::class, 'showLoginForm'])->name('login');
 
 
 
 // Route pour afficher le formulaire de connexion
-Route::get('/connexion', [AuthenticatedSessionController::class, 'create'])->name('login');
+//Route::get('/connexion', [AuthenticatedSessionController::class, 'create'])->name('login');
 
 // Route pour traiter la soumission du formulaire de connexion
-Route::post('/connexion', [AuthenticatedSessionController::class, 'store']);
+//Route::post('/connexion', [AuthenticatedSessionController::class, 'store']);
+
+//use App\Http\Controllers\Auth\LoginController;
+
+Route::post('connexion', [ConnexionController::class, 'login'])->name('login');
 
 
 Route::post('/register', [RegisteredUserController::class, 'store']);
