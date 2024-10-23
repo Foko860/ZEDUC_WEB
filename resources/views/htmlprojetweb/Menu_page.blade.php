@@ -10,7 +10,7 @@
     
 
     <!-- Lien vers les polices Google Fonts -->
-    <link rel="preconnect" href="{{ asset ('https://fonts.googleapis.com')}}">
+    <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com')}}">
     <link rel="preconnect" href="{{ asset('https://fonts.gstatic.com')}}" crossorigin>
 
     <!-- Font Awesome pour les icônes -->
