@@ -90,6 +90,6 @@ signupForm.addEventListener('submit', async (event) => {
 // Fonction pour afficher les messages d'erreur
 function displayErrors(errors) {
   // Affichez les erreurs à l'utilisateur, par exemple dans une alerte
-  const errorMessages = Object.values(errors).flat().join(', ');
+  const errorMessages = errors?Object.values(errors).flat().join(', '):null;
   alert(`Erreurs : ${errorMessages}`); // Affiche les erreurs
 }

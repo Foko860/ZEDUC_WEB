@@ -23,16 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">HOME</a>
+                        <a class="nav-link" href="">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../views/Menu_page.html">MENU</a>
+                        <a class="nav-link" href="{{ route('menu') }}">MENU</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" href="#">CONNEXION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">TABLEAU DE BORD</a>
+                        <a class="nav-link" href="{{ route('gestionmenu') }}">TABLEAU DE BORD</a>
                     </li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
                     </form>
                  </div>
                 <div class="text-center mt-3">
-                    <p>Vous n'avez pas de compte ? <a href="{{ asset("views/htmlprojetweb/inscription.blade.php")}}" class="create-account-link">Créer un compte</a></p>
+                    <p>Vous n'avez pas de compte ? <a href="{{ route('Inscription') }}" class="create-account-link">Créer un compte</a></p>
                 </div>
             </div>
         </div>

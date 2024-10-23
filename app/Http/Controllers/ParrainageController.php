@@ -12,8 +12,8 @@ class ParrainageController extends Controller
      */
     public function index()
     {
-        $parrainages = Parrainage::all();
-        return view('parrainages.index', compact('parrainages'));
+        //$parrainages = Parrainage::all();
+        return view('htmlprojetweb.parrainages');
     }
 
     /**

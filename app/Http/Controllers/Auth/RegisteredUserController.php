@@ -65,6 +65,6 @@ class RegisteredUserController extends Controller
             return response()->json(['message' => 'Inscription réussie', 'user' => $user], 201);
         }
 
-        return redirect(route('connexion', absolute: false));
+        return redirect(route('\menu', absolute: false));
     }
 }

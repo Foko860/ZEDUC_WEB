@@ -22,8 +22,8 @@
     <nav>
       <ul>
         <li><a href="#">HOME</a></li>
-        <li><a href="htmlprojetweb/parrainage.blade.php">PARRAINAGE</a></li>
-        <li><a href="#">MENU</a></li>
+        <li><a href="{{ route('parrainages.index') }}">PARRAINAGE</a></li>
+        <li><a href="{{ route('menu') }}">MENU</a></li>
         <li><a href="{{ route('login') }}">CONNEXION</a></li>
         <li><a href="#"> <i class="fas fa-shopping-cart"></i></a></li>
         

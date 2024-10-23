@@ -37,7 +37,7 @@ class AuthenticatedSessionController extends Controller
             // Regénérer la session
             $request->session()->regenerate();
 
-            return redirect()->intended('/dashboard'); // Redirigez vers le tableau de bord
+            return redirect()->intended('/menu'); // Redirigez vers le tableau de bord
         }
 
         // Si l'authentification échoue, retourner une erreur
