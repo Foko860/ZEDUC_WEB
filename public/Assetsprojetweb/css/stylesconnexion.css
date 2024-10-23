@@ -1,6 +1,7 @@
 body {
     padding-top: 50px;
-    background: url('images/zeduc\ logo.jpg') no-repeat center center fixed;
+    /*background: url("{{ asset('Assetsprojetweb/images/zeduc_logo.jpg') }}") no-repeat center center fixed;*/
+
     background-size: cover;
     font-family: 'Roboto', sans-serif; /* Police moderne et lisible */
 }

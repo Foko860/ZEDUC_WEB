@@ -43,7 +43,7 @@ class RegisteredUserController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' =>$request->password,
+            'password' =>Hash::make($request->password),
             'numero' => $request->numero,  // Ajout du numéro
         ]);
 
@@ -65,6 +65,6 @@ class RegisteredUserController extends Controller
             return response()->json(['message' => 'Inscription réussie', 'user' => $user], 201);
         }
 
-        return redirect(route('dashboard', absolute: false));
+        return redirect(route('connexion', absolute: false));
     }
 }
