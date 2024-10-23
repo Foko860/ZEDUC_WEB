@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>ZEDUC-SPACE</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset ('/public/Assetsprojetweb/css/StyleCssHomePage.css')}}">
+    <link rel="stylesheet" href="{{ asset ('Assetsprojetweb/css/StyleCssHomePage.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,7 +19,7 @@
     <header>
         
         <div class="navdiv">
-<div class="logo"> <a href="#"> <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="logo"> </a></div>
+<div class="logo"> <a href="#"> <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="logo"> </a></div>
         </div>
         <nav >
            <ul>
@@ -26,13 +27,13 @@
                 <a href="#" class="Acceuil"> Acceuil </a>
             </li>
             <li>
-                <a href="#">CONNEXION</a>
+                <a href="{{ route('login') }}">CONNEXION</a>
             </li>
             <li>
-                <a href="#"> MENU </a>
+                <a href="{{ route('menu') }}"> MENU </a>
             </li>
             <li>
-                <a href="#"> PARAINAGE </a>
+                <a href="{{ route('parrainages.index') }}"> PARAINAGE </a>
             </li>
         </ul>
       </nav>
@@ -48,6 +49,7 @@
 <div >
  
 <Section class="Section_photo">
+<img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="Poulet DG" class="product-image">
   <p>
       Bienvenue a Zeduc-sp@ce, votre restaurant en ligne <br>
       Pour un voyage gastronomique unique
@@ -56,7 +58,7 @@
   <Section id="products" class="card-container">
      <div class="card">
     <div class="cardImage">
-      <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="Poulet DG" class="product-image">
+      <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="Poulet DG" class="product-image">
     </div> 
     <div class="card-content">
       <h2>Poulet DG</h2>
@@ -67,7 +69,7 @@
 
     <div class="card">
       <div class="cardImage">
-        <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="ndolet" class="product-image">
+        <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="ndolet" class="product-image">
       </div> 
       <div class="card-content">
         <h2>Ndolet</h2>
@@ -77,7 +79,7 @@
       </div>
       <div class="card">
         <div class="cardImage">
-          <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Rectangle 336.png')}}" alt="cassoulet" class="product-image">
+          <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Rectangle 336.png')}}" alt="cassoulet" class="product-image">
         </div> 
         <div class="card-content">
           <h2>cassoulet</h2>
@@ -96,7 +98,7 @@
       <div class="row">
         <div class="col-sm-12, col-md-4, col-lg-4">
           <div class="card" style="width: 18rem;">
-              <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/bille.png')}}" class="card-img-top" alt="...">
+              <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/bille.png')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">billard</h5>
                 <a href="#" class="btn btn-warning">jouer</a>
@@ -105,7 +107,7 @@
         </div>
         <div class="col-sm-12, col-md-4, col-lg-4">
           <div class="card" style="width: 18rem;">
-              <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/barbec.png')}}" class="card-img-top" alt="...">
+              <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/barbec.png')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Barbecue</h5>
                 
@@ -115,7 +117,7 @@
         </div>
         <div class="col-sm-12, col-md-4, col-lg-4">
           <div class="card" style="width: 18rem;">
-              <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/bille.png')}}" class="card-img-top" alt="...">
+              <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/bille.png')}}" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">billard</h5>
                 <a href="#" class="btn btn-warning">jouer</a>
@@ -201,7 +203,7 @@
         <p>Copyright &copy;2023; Designed by <span class="designer">Group6</span></p>
     </div>
     </Footer>
-    <script src="{{ asset ('/public/Assetsprojetweb/js/scriptHomeP.js')}}"></script>
+    <script src="{{ asset ('Assetsprojetweb/js/scriptHomeP.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

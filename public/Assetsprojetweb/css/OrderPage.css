@@ -2,6 +2,9 @@
 .bg-brown {
     background-color: #462F1C;
 }
+/*body{
+    background-color: #DC3545;
+}*/
 
 .navbar-dark .navbar-nav .nav-link {
     color: black;
@@ -21,9 +24,7 @@
     border-color: #ff9900;
 }
 
-html{
-    background-image: url(assets/images/page.svg);
-}
+
 
  /* Style pour la section de recherche */
  .search-section {
