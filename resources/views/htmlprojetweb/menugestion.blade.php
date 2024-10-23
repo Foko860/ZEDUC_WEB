@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Zeduc-Space Order</title>
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Bootstrap CSS -->
     <link href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com')}}">
@@ -15,16 +18,16 @@
     <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('https://fonts.googleapis.com/css2?family=Timmana&display=swap')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ asset('/resources/css/OrderPage.css')}}">
+    <link rel="stylesheet" href="{{ asset('Assetsprojetweb/css/OrderPage.css')}}">
     <style>
         body {
-            background-image: url('assets/images/page.svg');
+           /* background-image: url('ass');
             background-size: 100%;
             background-position: center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             font-family: roboto, sans-serif;
-            color: black;
+            color: black;*/
         }
 
         .content {
@@ -54,7 +57,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="/public/Assetsprojetweb/assets/images/logo.svg" alt="Zeudc Space" height="50">
+                <img src="{{asset('Assetsprojetweb\images\iconesmenu\logo.svg')}}" alt="Zeudc Space" height="50">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,16 +66,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Connexion</a>
+                        <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="{{ route('menu') }}">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Gestion des Commandes</a>
+                        <a class="nav-link" href="{{ route('login') }}">CONNEXION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Tableau de Bord</a>
+                        <a class="nav-link active" aria-current="page" href="#">GESTION DES COMMANDES</a>
                     </li>
                 </ul>
             </div>
@@ -82,8 +85,8 @@
     <!-- Main Content -->
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
-            <h1>Order</h1>
-            <button class="btn btn-warning">+ Create order</button>
+            <h1>Gestion du Menu</h1>
+            <button class="btn btn-warning">+ Ajouter un Menu</button>
         </div>
 
         <!-- Section de recherche -->
@@ -282,7 +285,7 @@
 
     <!-- Bootstrap JS -->
     <script src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{ asset('/resources/js/OrderPage.js')}}"></script>
+    <script src="{{ asset('Assetsprojetweb/js/OrderPage.js')}}"></script>
 
 </body>
 

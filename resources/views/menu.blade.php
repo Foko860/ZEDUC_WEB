@@ -3,18 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}"> 
     <title>Zeduc-Space Menu</title>
 
     <!-- Lien vers le fichier CSS avec l'helper Laravel asset() -->
-    <link rel="stylesheet" href="{{ asset('/resources/css/Menu_page.css) }}">
+    <link rel="stylesheet" href="{{ asset("Assetsprojetweb/css/Menu_page.css") }}">
     
 
     <!-- Lien vers les polices Google Fonts -->
+<<<<<<< HEAD:resources/views/menu.blade.php
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+=======
     <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com')}}">
     <link rel="preconnect" href="{{ asset('https://fonts.gstatic.com')}}" crossorigin>
+>>>>>>> f23dcc3a06c8e3ec0992f2a932f482e3709ca866:resources/views/htmlprojetweb/Menu_page.blade.php
 
     <!-- Font Awesome pour les icônes -->
-    <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css')}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{{ asset("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css")}}" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="{{ asset('https://fonts.googleapis.com/css2?family=Timmana&display=swap')}}" rel="stylesheet">
     
     <!-- Lien vers le fichier CSS spécifique pour la page -->
@@ -26,21 +32,21 @@
   <!-- Barre de navigation en haut -->
         <nav>
             <div class="logo">
-                <img src="{{ asset('/public/Assetsprojetweb/assets/icones/logo.svg')}}" alt="Zeduc-space-logo">
+                <img src="{{ asset('Assetsprojetweb/assets/icones/logo.svg')}}" alt="Zeduc-space-logo">
                 
             </div>
 
             <ul class="nav-links">
-                <li><a href=" # ">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">About</a></li>
-                <li><a1 href="#">Menu</a1></li>
-                <li><a href="#">Parrainage</a></li>
+                <li><a1 href="{{ route('menu') }}">Menu</a1></li>
+                <li><a href="{{ route('parrainages.index') }}">Parrainage</a></li>
             </ul>
             
            <!-- Panier -->
 <!-- Icône du panier -->
 <div class="cart" id="cart-icon">
-    <img src="{{ asset('/public/Assetsprojetweb/assets/icones/sac.svg') }}" alt="cart">
+    <img src="{{ asset('Assetsprojetweb/assets/icones/sac.svg') }}" alt="cart">
 </div>
         </nav>
     </header>
@@ -50,7 +56,7 @@
                 <div class="product-grid">
                     <!-- Carte produit -->
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/cassoulet.svg') }}" alt="Cassoulet">
+                        <img src="{{asset("Assetsprojetweb\images\imagesmenu\cassoulet.svg")}}" alt="Cassoulet">
                         <h3>CASSOULET</h3>
                         <P>1000 XAF</P>
                         <p>Découvrez des pluies de saveurs avec nos plats de cassoulets fait sur mésure pour aiguiller vos papilles gustatives.</p>
@@ -64,7 +70,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/ndolè.svg')}}" alt="Ndolè">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/ndolè.svg')}}" alt="Ndolè">
                         <h3>NDOLE</h3>
                         <P>1000 XAF</P>
                         <p>Le "Ndolè Royal" un met traditionnelle exquis qui fait battre des coeurs.</p>
@@ -77,7 +83,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/poulet_dg.svg')}}" alt="Poulet DG">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/poulet_dg.svg')}}" alt="Poulet DG">
                         <h3>POULET DG</h3>
                         <P>1500 XAF</P>
                         <p>Rien que pour des directeurs générales, le Poulet DG est repas d'envergure pour des personnes de caractères.</p>
@@ -90,7 +96,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/okok.svg')}}" alt="Okok">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/okok.svg')}}" alt="Okok">
                         <h3>OKOK</h3>
                         <P>1000 XAF</P>
                         <p>Sous deux formes; découvrez le plats de nos capitales, fait comme à la maison avec tout l'amour.</p>
@@ -103,7 +109,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/poulet_roti.svg')}}" alt="Poulet roti">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/poulet_roti.svg')}}" alt="Poulet roti">
                         <h3>POULET ROTI</h3>
                         <P>1000 XAF</P>
                         <div class="quantity-selector">
@@ -115,7 +121,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/porc_roti.svg')}}" alt="PORC ROTI">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/porc_roti.svg')}}" alt="PORC ROTI">
                         <h3>PORC ROTI</h3>
                         <P>1000 XAF</P>
                         <div class="quantity-selector">
@@ -127,7 +133,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/pile_pomme.svg')}}" alt="Pile de pommes">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/pile_pomme.svg')}}" alt="Pile de pommes">
                         <h3>PILE POMMES</h3>
                         <P>1000 XAF</P>
                         <div class="quantity-selector">
@@ -139,7 +145,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/poulet_pane.svg')}}" alt="POULET PANE">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/poulet_pane.svg')}}" alt="POULET PANE">
                         <h3>POULET PANE</h3>
                         <P>1500 XAF</P>
                         <div class="quantity-selector">
@@ -151,7 +157,7 @@
                      </div>
 
                      <div class="product-card">
-                        <img src="{{ asset('/public/Assetsprojetweb/assets/images/riz_sauce_tomate.svg')}}" alt="Riz sauce tomate">
+                        <img src="{{ asset('Assetsprojetweb/assets/images/riz_sauce_tomate.svg')}}" alt="Riz sauce tomate">
                         <h3>RIZ SAUCE TOMATE</h3>
                         <P>1000 XAF</P>
                         <p>Repas très communs, pour ne pas oublier les évènements de la maison.</p>
@@ -216,7 +222,7 @@
     </div>
 
     <div class="price-filter">
-        <img class="img" src="{{ asset('/public/Assetsprojetweb/assets/images/filter.svg')}}" alt="filtre">
+        <img class="img" src="{{ asset('Assetsprojetweb/assets/images/filter.svg')}}" alt="filtre">
         <h4>Filter By Price</h4>
         <input type="range" min="0" max="5000" value="1000">
         <p>From 500XAF TO 5000XAF <br> Filter</p>
@@ -270,7 +276,7 @@
       </div>
       </Footer>
       
-    <script src="{{ asset('/resources/js/Menu.js')}}"></script> <!-- Lien vers votre script JavaScript -->
+    <script src="{{ asset("Assetsprojetweb/js/Menu.js") }} " defer></script> <!-- Lien vers votre script JavaScript -->
     
 </body>
 </html>
