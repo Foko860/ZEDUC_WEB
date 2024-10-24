@@ -1,17 +1,20 @@
- // Wait for the DOM to load
+// Attend que le DOM soit chargé
 document.addEventListener("DOMContentLoaded", function() {
 
-    // Profile Edit Button Interaction
+    // Sélectionne les éléments nécessaires
     const editButton = document.querySelector(".edit-button");
     const profileForm = document.querySelector(".profile-form");
     const saveButton = document.querySelector(".save-button");
 
-    // By default, hide the profile form
+    // Masque le formulaire de profil par défaut
     profileForm.style.display = "none";
 
-    // When the user clicks on "modifier profil", toggle the visibility of the form
+    // Lorsque l'utilisateur clique sur "modifier profil", bascule la visibilité du formulaire
     editButton.addEventListener("click", function() {
-        if (profileForm.style.display === "none") {
+        profileForm.classList.toggle("visible");
+
+        // Change le texte du bouton
+        if (profileForm.classList.contains("visible")) {
             profileForm.style.display = "block";
             editButton.textContent = "Annuler";
         } else {
@@ -20,17 +23,17 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Form validation on submit
+    // Validation du formulaire lors de la soumission
     profileForm.addEventListener("submit", function(event) {
-        event.preventDefault(); // Prevent form from refreshing the page
+        event.preventDefault(); // Empêche le rafraîchissement de la page
 
-        // Get input values
+        // Récupère les valeurs des champs du formulaire
         const pseudo = document.getElementById("pseudo").value;
         const email = document.getElementById("email").value;
         const phone = document.getElementById("phone").value;
         const address = document.getElementById("address").value;
 
-        // Basic validation
+        // Validation basique
         if (!pseudo || !email || !phone || !address) {
             alert("Tous les champs doivent être remplis !");
             return;
@@ -46,28 +49,28 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
-        // Simulate saving the data
+        // Simule l'enregistrement des données
         alert("Les informations ont été enregistrées avec succès !");
         profileForm.style.display = "none";
         editButton.textContent = "Modifier Profil";
     });
 
-    // Email validation function
+    // Fonction de validation de l'email
     function validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     }
 
-    // Phone validation function
+    // Fonction de validation du numéro de téléphone
     function validatePhone(phone) {
-        const re = /^[0-9]{10}$/;  // Example for a 10-digit phone number
+        const re = /^[0-9]{10}$/;
         return re.test(phone);
     }
 
-    // Optional: Let users upload or change their avatar by clicking on the avatar section
+    // Optionnel : permet à l'utilisateur de modifier l'avatar en cliquant dessus
     const profileAvatar = document.querySelector(".profile-avatar");
     profileAvatar.addEventListener("click", function() {
-        alert("Fonctionnalité à venir: téléchargez ou modifiez votre avatar !");
+        alert("Fonctionnalité à venir : téléchargez ou modifiez votre avatar !");
     });
 
 });
