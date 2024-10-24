@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Parrainage;
 use Illuminate\Http\Request;
+use SimpleSoftwareIO\QrCode\Facades\QrCode;
 
 class ParrainageController extends Controller
 {
@@ -12,34 +13,26 @@ class ParrainageController extends Controller
      */
     public function index()
     {
-        //$parrainages = Parrainage::all();
-        return view('htmlprojetweb.parrainages');
-    }
+         // Récupérer l'utilisateur authentifié
+         $user = auth()->user();
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('parrainages.create');
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        $validated = $request->validate([
-            'id_parrain' => 'required|exists:users,id',
-            'id_filleul' => 'required|exists:users,id',
-            'date_parrainage' => 'required|date',
-            'points_de_fidelites' => 'nullable|integer',
-        ]);
-    
-        Parrainage::create($validated);
-    
-        return redirect()->route('parrainages.index')->with('success', 'Parrainage créé avec succès');
-    }
+         // Générer un code de parrainage unique
+         $codeParrainage = $this->generateParrainageCode($user);
+ 
+         // Générer un QR code
+         $qrCode = QrCode::size(200)->generate($codeParrainage);
+ 
+         // Retourner la vue avec les données
+         return view('htmlprojetweb.parrainage', compact('user', 'codeParrainage', 'qrCode'));
+     }
+ 
+     // Méthode pour générer un code de parrainage unique
+     private function generateParrainageCode(User $user)
+     {
+         // Exemple de génération : utiliser l'ID de l'utilisateur et un hash
+         return strtoupper(substr(md5($user->id . now()), 0, 10));
+     }
+ 
 
     /**
      * Display the specified resource.
