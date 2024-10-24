@@ -85,23 +85,78 @@ nav .cart img{
 }
 
 
-.product-card{
-    background-color: #EEEDDD;;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    text-align: center;
-    cursor: pointer;
-   
+/* Container des cartes produits */
+.product-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Nombre de colonnes adaptatif */
+    gap: 20px; /* Espacement entre les cartes */
+    padding: 20px;
+    justify-items: center; /* Centrer les cartes dans chaque colonne */
 }
 
-.product-card img{
-    width: 100%;
-    height: 200px;
-    object-fit:cover ;
+/* Style pour chaque carte produit */
+.product-card {
+    background-color: #fff;
     border-radius: 8px;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 100%; /* S'assurer que les cartes prennent la largeur maximale dans leur colonne */
 }
+
+/* Image du produit */
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Titre du produit */
+.product-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Description du produit */
+.product-description {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+/* Prix du produit */
+.product-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #CFBD97; /* Couleur dorée pour accentuer le prix */
+    margin-bottom: 15px;
+}
+
+/* Bouton Commander */
+.add-to-cart-button {
+    background-color: #CFBD97; /* Couleur dorée pour l'accent */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet hover sur le bouton */
+.add-to-cart-button:hover {
+    background-color: #b49f82; /* Légère variation sur hover */
+}
+
+/* Effet hover sur la carte */
+.product-card:hover {
+    transform: scale(1.05); /* Agrandissement sur hover */
+}
+
 
 .product-card h3{
     margin: 10px 0;

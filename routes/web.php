@@ -39,7 +39,9 @@ Route::post('/connexion', [AuthenticatedSessionController::class, 'store']);
 
 /*Route::post('connexion', [ConnexionController::class, 'login'])->name('login');*/
 
-Route::get('menu', [MenuController::class, 'index'])->name('menu');
+
+//afficher le menu pour les utilisateurs
+Route::get('/menu', [MenuController::class, 'showMenu'])->name('menu');
 
 
 Route::post('/register', [RegisteredUserController::class, 'store']);
@@ -52,7 +54,8 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('gestionmenu',[GestionMenuController::class,'index'])->name('gestionmenu');
+//afficher la page de gestion du menu
+//Route::get('gestionmenu',[GestionMenuController::class,'index'])->name('gestionmenu');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -68,6 +71,20 @@ Route::resource('users',UserController::class)
 Route::resource('parrainages', ParrainageController::class)
     ->only(['index', 'store', 'create', 'edit', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);
+
+
+Route::post('/menu/ajouter', [MenuController::class, 'ajouterPlat'])->name('ajouter-plat');
+//Route::post('menu/ajouter', [MenuController::class, 'store'])->name('menu.store');
+Route::put('/menu/modifier/{id}', [MenuController::class, 'modifierPlat'])->name('modifier-plat');
+Route::get('/menu/supprimer/{id}', [MenuController::class,  'supprimerPlat'])->name('supprimer-plat');
+Route::get('/menugestion', [MenuController::class, 'showGestionMenu'])->name('gestion-menu');
+
+
+use App\Http\Controllers\CartController;
+
+Route::post('/add-to-cart/{id_Produit}', [CartController::class, 'addToCart'])->name('addToCart');
+
+
 
 
 

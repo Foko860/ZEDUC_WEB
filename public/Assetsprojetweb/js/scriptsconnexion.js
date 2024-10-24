@@ -19,7 +19,8 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
     .then(response => {
         if (response.ok) {
             // Si la connexion réussit, rediriger vers le tableau de bord
-            window.location.href = '/dashboard'; // Changez cela selon votre logique après une connexion réussie
+            //window.location.href = '/dashboard';
+            window.location.href = '/menu'; // Changez cela selon votre logique après une connexion réussie
         } else {
             // Gérer les erreurs
             return response.json(); // Récupérer le contenu de la réponse
