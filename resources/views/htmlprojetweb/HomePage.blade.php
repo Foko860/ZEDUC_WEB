@@ -24,7 +24,7 @@
         <nav >
            <ul>
             <li>
-                <a href="/" class="Acceuil"> Acceuil </a>
+                <a href="/" class="Acceuil"> ACCEUIL </a>
             </li>
             <li>
                 <a href="{{ route('login') }}">CONNEXION</a>

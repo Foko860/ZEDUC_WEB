@@ -31,7 +31,7 @@
                         <a class="nav-link" href="{{ route('menu') }}">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">ORDER NOW</a>
+                        <a class="nav-link" href="#">PROMO & EVENEMENTS</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link cart-icon" href="#"><i class="fas fa-shopping-cart"></i></a>

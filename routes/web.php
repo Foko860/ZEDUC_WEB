@@ -119,6 +119,11 @@ Route::get('/paiements', function () {
 })->name('paiements.index');
 
 
+Route::get('/stats', function () {
+    return view('htmlprojetweb.stats'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('stats.index');
+
+
 
 
 

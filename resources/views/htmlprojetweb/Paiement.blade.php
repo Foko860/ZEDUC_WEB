@@ -23,16 +23,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link" href="/">ACCEUIL</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Menu</a>
+                    <a class="nav-link" href="{{ route('menu') }}">MENU</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Validation</a>
+                    <a class="nav-link active" aria-current="page" href="#">VALIDATION</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Tableau de Bord</a>
+                    <a class="nav-link" href="#">TABLEAU DE BORD</a>
                 </li>
             </ul>
         </div>
@@ -114,7 +114,7 @@
         </div>
     </div>
 </div>
-<script src="{{ asset('/public/Assetsprojetweb/js/Paiement.js')}}"></script>
+<script src="{{ asset('Assetsprojetweb/js/Paiement.js')}}"></script>
 <script src="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js')}}"></script>
 </body>
 </html>

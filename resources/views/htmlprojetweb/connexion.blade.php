@@ -25,14 +25,14 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/">HOME</a>
                     </li>
-                    <li class="nav-item">
+                    <!--<li class="nav-item">
                         <a class="nav-link" href="{{ route('menu') }}">MENU</a>
-                    </li>
+                    </li>-->
                     <li class="nav-item">
                         <a class="nav-link active" href="#">CONNEXION</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="{{ route('employes.index') }}">GESTION DES EMPLOYES</a>
+                    <!--<li class="nav-item">
+                    <a class="nav-link" href="{{ route('employes.index') }}">GESTION DES EMPLOYES</a>-->
                     
                     </li>
                 </ul>
@@ -57,6 +57,8 @@
                         </div>
                         <button type="submit" class="btn btn-primary btn-block">Connexion</button>
                     </form>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="Btnemployer"><a href="{{ route('employes.index') }}">Connexion en tant que Employé</a></button>
                  </div>
                 <div class="text-center mt-3">
                     <p>Vous n'avez pas de compte ? <a href="{{ route('Inscription') }}" class="create-account-link">Créer un compte</a></p>

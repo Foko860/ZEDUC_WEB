@@ -25,7 +25,7 @@
             <ul class="nav-links">
                 <li><a href="/">ACCEUIL</a></li>
                 <li><a href="#">MENU</a></li>
-                <li><a href="#">STATISQUES</a></li>
+                <li><a href="{{ route('stats.index') }}">STATISQUES</a></li>
                 <li><a  class="active" href="{{ route('employes.index') }}">GESTION DES EMPLOYES</a></li>
                 <li><a href="{{ route('reclamations.index') }}">RECLAMATIONS</a></li>
                 <li><a href="#"><i class="fas fa-cog"></i></a></li>
