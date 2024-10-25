@@ -123,4 +123,13 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    'aliases' => [
+    'App' => Illuminate\Support\Facades\App::class,
+    'Auth' => Illuminate\Support\Facades\Auth::class,
+    'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class,
+    // Autres alias si nécessaire
+],
+
+
+
 ];
