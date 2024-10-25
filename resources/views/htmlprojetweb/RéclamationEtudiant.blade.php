@@ -8,7 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="{{ asset ('/public/Assetsprojetweb/css/StyleCssRéclamationEtudiant.css')}}">
+<link rel="stylesheet" href="{{ asset ('Assetsprojetweb/css/StyleCssRéclamationEtudiant.css')}}">
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,21 +19,21 @@
     <header>
         
         <div class="navdiv">
-<div class="logo"> <a href="#"> <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="logo"> </a></div>
+<div class="logo"> <a href="#"> <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="logo"> </a></div>
         </div>
         <nav >
            <ul>
             <li>
-                <a href="#" class="Acceuil"> Gestion de reclamation </a>
+                <a href="#" class="Acceuil"> GESTION DE RECLAMATION </a>
             </li>
             <li>
-                <a href="#">statistique generale</a>
+                <a href="#">STATISTIQUE GENERALE</a>
             </li>
             <li>
-                <a href="#"> Gestion des employés </a>
+                <a href="#"> GESTION DES EMPLOYES </a>
             </li>
             <li>
-                <a href="#"> suppervision des commandes </a>
+                <a href="{{ route('commandes.index') }}"> SUPERVISION DES COMMANDES</a>
             </li>
         </ul>
       </nav> 
@@ -41,7 +41,7 @@
    <main>
 </section>
 <section class="section-contact">
-    <img src="{{ asset ('/public/Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="">
+    <img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Rectangle 4.png')}}" alt="">
     <H2>Reclamations</H2>
     <form action="" method="get" id="projet">
         <fieldset>
@@ -117,7 +117,7 @@
           <p>Copyright &copy;2023; Designed by <span class="designer">Group6</span></p>
       </div>
       </Footer>
-<script src="ScriptPageReclamation.js">  </script>
+<script src="{{ asset ('Assetsprojetweb/js/RéclamationEtudiant.js')}}">  </script>
 
 </body>
 </html>

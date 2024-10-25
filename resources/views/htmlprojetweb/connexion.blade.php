@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="">HOME</a>
+                        <a class="nav-link" href="/">HOME</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('menu') }}">MENU</a>
@@ -32,7 +32,8 @@
                         <a class="nav-link active" href="#">CONNEXION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('gestionmenu') }}">TABLEAU DE BORD</a>
+                    <a class="nav-link" href="{{ route('employes.index') }}">GESTION DES EMPLOYES</a>
+                    
                     </li>
                 </ul>
             </div>

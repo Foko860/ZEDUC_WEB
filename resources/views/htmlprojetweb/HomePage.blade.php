@@ -24,7 +24,7 @@
         <nav >
            <ul>
             <li>
-                <a href="#" class="Acceuil"> Acceuil </a>
+                <a href="/" class="Acceuil"> Acceuil </a>
             </li>
             <li>
                 <a href="{{ route('login') }}">CONNEXION</a>
@@ -49,7 +49,8 @@
 <div >
  
 <Section class="Section_photo">
-<img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="Poulet DG" class="product-image">
+  
+<!--<img src="{{ asset ('Assetsprojetweb/images/asset-Home-reclamation/Frame 40.png')}}" alt="Poulet DG" class="product-image"> -->
   <p>
       Bienvenue a Zeduc-sp@ce, votre restaurant en ligne <br>
       Pour un voyage gastronomique unique
