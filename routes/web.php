@@ -74,7 +74,7 @@ Route::resource('parrainages', ParrainageController::class)
 
 
 Route::post('/menu/ajouter', [MenuController::class, 'ajouterPlat'])->name('ajouter-plat');
-//Route::post('menu/ajouter', [MenuController::class, 'store'])->name('menu.store');
+Route::get('menu/ajouter', [MenuController::class, 'store'])->name('menu.store');
 Route::put('/menu/modifier/{id}', [MenuController::class, 'modifierPlat'])->name('modifier-plat');
 Route::get('/menu/supprimer/{id}', [MenuController::class,  'supprimerPlat'])->name('supprimer-plat');
 Route::get('/menugestion', [MenuController::class, 'showGestionMenu'])->name('gestion-menu');
@@ -83,6 +83,40 @@ Route::get('/menugestion', [MenuController::class, 'showGestionMenu'])->name('ge
 use App\Http\Controllers\CartController;
 
 Route::post('/add-to-cart/{id_Produit}', [CartController::class, 'addToCart'])->name('addToCart');
+
+
+
+use App\Http\Controllers\EmployeController;
+
+// Routes pour les employés
+Route::get('/employes', [EmployeController::class, 'index'])->name('employes.index');
+Route::get('/employes/create', [EmployeController::class, 'create'])->name('employes.create');
+Route::post('/employes', [EmployeController::class, 'store'])->name('employes.store');
+Route::get('/employes/{id_Employe}/edit', [EmployeController::class, 'edit'])->name('employes.edit');
+Route::put('/employes/{id_Employe}', [EmployeController::class, 'update'])->name('employes.update');
+Route::delete('/employes/{id_Employe}', [EmployeController::class, 'destroy'])->name('employes.destroy');
+
+
+
+use App\Http\Controllers\ReclamationController;
+
+// Routes pour les réclamations
+Route::get('/reclamations', [ReclamationController::class, 'index'])->name('reclamations.index');
+Route::get('/reclamations/create', [ReclamationController::class, 'create'])->name('reclamations.create');
+Route::post('/reclamations', [ReclamationController::class, 'store'])->name('reclamations.store');
+Route::get('/reclamations/{id}/edit', [ReclamationController::class, 'edit'])->name('reclamations.edit');
+Route::put('/reclamations/{id}', [ReclamationController::class, 'update'])->name('reclamations.update');
+Route::delete('/reclamations/{id}', [ReclamationController::class, 'destroy'])->name('reclamations.destroy');
+
+
+Route::get('/commandes', function () {
+    return view('htmlprojetweb.gestiondecommande'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('commandes.index');
+
+
+Route::get('/paiements', function () {
+    return view('htmlprojetweb.Paiement'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('paiements.index');
 
 
 

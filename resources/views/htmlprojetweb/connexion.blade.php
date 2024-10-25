@@ -32,7 +32,8 @@
                         <a class="nav-link active" href="#">CONNEXION</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('gestion-menu') }}">TABLEAU DE BORD</a>
+                    <a class="nav-link" href="{{ route('employes.index') }}">GESTION DES EMPLOYES</a>
+                    
                     </li>
                 </ul>
             </div>

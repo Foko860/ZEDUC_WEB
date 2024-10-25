@@ -122,6 +122,10 @@ document.addEventListener("DOMContentLoaded", () => {
         cartPanel.classList.add('open'); // Ajoute la classe pour ouvrir le panneau
     });
 
+    document.getElementById('checkout').addEventListener('click', function() {
+        window.location.href = '/paiements'; // Redirection vers la route paiements.index
+    });
+
     // Fonction pour fermer le panneau du panier
     closeCartButton.addEventListener('click', () => {
         cartPanel.classList.remove('open'); // Enlève la classe pour fermer le panneau

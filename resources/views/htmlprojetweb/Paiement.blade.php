@@ -7,14 +7,14 @@
     <link href="{{ asset('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css')}}">
 
-    <link rel="stylesheet" href="{{ asset('/public/Assetsprojetweb/css/Paiement.css')}}">
+    <link rel="stylesheet" href="{{ asset('Assetsprojetweb/css/Paiement.css')}}">
 </head>
 <body>
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-brown">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="{{ asset('/public/Assetsprojetweb/assets/icones/logo.svg')}}" alt="Zeduc Space" height="50">
+            <img src="{{ asset('Assetsprojetweb/assets/icones/logo.svg')}}" alt="Zeduc Space" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +80,7 @@
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="paymentMethod" id="orangeMoney" value="orange">
                         <label class="form-check-label" for="orangeMoney">
-                            <img src="{{ asset('/public/Assetsprojetweb/assets/icones/OM.svg')}}" alt="Orange Money" style="width: 100px;">
+                            <img src="{{ asset('Assetsprojetweb/assets/icones/OM.svg')}}" alt="Orange Money" style="width: 100px;">
                             Orange Money
                         </label>
                     </div>
@@ -88,14 +88,14 @@
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="paymentMethod" id="mobileMoney" value="mobile">
                         <label class="form-check-label" for="mobileMoney">
-                            <img src="{{ asset('/public/Assetsprojetweb/assets/icones/MOMO.svg')}}" alt="Mobile Money" style="width: 100px;">
+                            <img src="{{ asset('Assetsprojetweb/assets/icones/MOMO.svg')}}" alt="Mobile Money" style="width: 100px;">
                             Mobile Money
                         </label>
                     </div>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="paymentMethod" id="mobileMoney" value="mobile">
                         <label class="form-check-label" for="mobileMoney">
-                            <img src="{{ asset('/public/Assetsprojetweb/assets/images/pièces.jpg')}}" alt="Pieces" style="width: 100px; height: 55px;">
+                            <img src="{{ asset('Assetsprojetweb/assets/images/pièces.jpg')}}" alt="Pieces" style="width: 100px; height: 55px;">
                             Payer en Cash
                         </label>
                     </div>

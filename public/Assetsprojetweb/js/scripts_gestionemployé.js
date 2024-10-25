@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.edit-btn').forEach(button => {
       button.addEventListener('click', function() {
           let row = this.closest('tr');
-          let id = row.cells[0].innerText;
+          //let id = row.cells[0].innerText;
           let name = row.cells[1].innerText;
           let prenom = row.cells[2].innerText;
           let email = row.cells[3].innerText;
           let poste = row.cells[4].innerText.trim();
           
           // Remplir les champs du formulaire de modification
-          document.getElementById('editEmployeeId').value = id;
+          //document.getElementById('editEmployeeId').value = id;
           document.getElementById('editEmployeeName').value = name;
           document.getElementById('editEmployeePrenom').value = prenom;
           document.getElementById('editEmployeeEmail').value = email;
