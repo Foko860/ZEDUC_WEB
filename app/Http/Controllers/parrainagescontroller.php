@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Parrainage;
 use Illuminate\Http\Request;
 use SimpleSoftwareIO\QrCode\Facades\QrCode;
-use APP\Http\Controllers\UserController;
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 
 class ParrainageController extends Controller
 {

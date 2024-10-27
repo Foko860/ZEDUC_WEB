@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promotion & Événements - Zeduc-Space</title>
-    <link rel="stylesheet" href="promotion.css">
+    <link rel="stylesheet" href="{{ asset("Assetsprojetweb/css/promotion.css") }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,7 +14,7 @@
 
     <header>
         <div class="logo">
-            <img src="assets\IMG-20241007-WA0086 1.png" alt="Zeduc-Space Logo">
+            <img src="{{ asset('Assetsprojetweb/assets/icones/logo.svg')}}" alt="Zeduc-Space Logo">
         </div>
         <nav class="nav-bar">
             <ul>

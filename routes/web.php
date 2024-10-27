@@ -124,6 +124,27 @@ Route::get('/stats', function () {
 })->name('stats.index');
 
 
+Route::get('/event', function () {
+    return view('htmlprojetweb.promotion'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('promotion.index');
+
+
+Route::get('/events', function () {
+    return view('htmlprojetweb.participation'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('participation.index');
+
+
+use App\Http\Controllers\ConnexionemployeController;
+
+Route::post('/login-employe', [ConnexionemployeController::class, 'authenticate']);
+
+
+Route::get('/espaceemploye', function () {
+    return view('htmlprojetweb.connexionemploye'); // Assurez-vous que le fichier est situé dans resources/views/gestiondecommande.blade.php
+})->name('connexionemploye.index');
+
+
+
 
 
 

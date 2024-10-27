@@ -33,7 +33,7 @@
                 <a href="{{ route('menu') }}"> MENU </a>
             </li>
             <li>
-                <a href="{{ route('parrainages.index') }}"> PARAINAGE </a>
+                <a href="{{ route('connexionemploye.index') }}"> ESPACE EMPLOYE </a>
             </li>
         </ul>
       </nav>
@@ -127,50 +127,87 @@
         </div>
       </div>
     </div>
-    <p class="Abonnement">
-      Abonnez-vous à des saveurs uniques ! Avec notre service d'abonnement, <br>
-                   savourez chaque semaine des plats gourmands, <br>
-      frais et livrés directement à votre domicile  sans effort, juste du plaisir
-    </p>
-   <section class="sectionCentrer">
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col">Abonnement_1</th>
-          <th scope="col">Abonnement_2</th>
-          <th scope="col">Abonnement_3</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>30000 FCFA</td>
-          <td>15000 FCFA</td>
-          <td>45000 FCFA</td>
-        </tr>
-        <tr>
-          <td>
-            30 plats dont <br>
-            5 Plats de 2000FCFA <br>
-            20 plats de 1000FCFA <br>
-            5 plats de2500FCFA <br>
-          </td>
-          <td>
-            30 plats dont <br>
-            5 Plats de 2000FCFA <br>
-            22 plats de 1000FCFA <br>
-            3 plats de2500FCFA <br>
-          </td>
-          <td>
-            30 plats dont <br>
-            10 Plats de 2000FCFA <br>
-            10 plats de 1000FCFA <br>
-            10 plats de2500FCFA <br>
-          </td>
-        </tr>
-  
-      </tbody>
-    </table>
-   </section>
+    <section class="sectionCentrer">
+          <p class="Abonnement">
+              Parce que qualité entraine fidélité <br>
+              Voici le TOP 10 de nos meilleurs clients
+          </p>
+      </section>
+    <section class="top-clients-section">
+        <div class="table-container">
+            <table class="top-clients-table">
+                <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Nom du Client</th>
+                    <th>Total Achats (FCFA)</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!-- Exemples de clients, remplace avec les données dynamiques si besoin -->
+                <tr>
+                    <td>1</td>
+                    <td>Jean Dupont</td>
+                    <td>30 000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Marie Curie</td>
+                    <td>20 500</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>4</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>5</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>6</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>7</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>8</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>9</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <tr>
+                    <td>10</td>
+                    <td>Louis Pasteur</td>
+                    <td>20 200</td>
+                </tr>
+
+                <!-- Ajoute ici les autres clients -->
+                </tbody>
+            </table>
+        </div>
+    </section>
   </Section>
 <!-- Le panneau du panier (caché au départ) -->
 <div id="cart-panel" class="cart-panel">

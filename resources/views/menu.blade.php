@@ -37,8 +37,8 @@
             </div>
 
             <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="/">HOME</a></li>
+                <li><a href="{{ route('participation.index') }}">Event</a></li>
                 <li><a1 href="{{ route('menu') }}">Menu</a1></li>
                 <li><a href="{{ route('parrainages.index') }}">Parrainage</a></li>
             </ul>
@@ -248,7 +248,7 @@
     <ul id="cart-items">
         <!-- Les éléments du panier seront ajoutés ici via JavaScript -->
     </ul>
-    <button id="validate-cart">Valider</button>
+    <button id="validate-cart"><a href="{{ route('paiements.index') }}">Valider</a></button>
 </div>
 
 </div>
